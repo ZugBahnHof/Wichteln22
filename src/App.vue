@@ -18,7 +18,7 @@ export default {
     SnowFlakes,
   },
   data: () => {return {
-    open: true,
+    open: false,
     reducedMotion: false,
   }}
 }
