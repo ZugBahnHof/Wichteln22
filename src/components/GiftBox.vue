@@ -33,6 +33,7 @@ export default {
     left: 50%;
     transform: translate(-50%);
     transition: all 2s ease;
+    border-radius: 2px;
   }
   .box .front {
     width: clamp(200px, 50vmin, 600px);
@@ -50,7 +51,7 @@ export default {
     background-color: red;
     top: 50%;
     left: 50%;
-    box-shadow: 0 3px 2px -2px rgba(128, 0, 0, 1);
+    box-shadow: 0 3px 2px -2px rgba(128, 0, 0, 1), inset 0 20px 5px -12px rgba(226, 226, 226, 1);
     transform: translate(-50%, clamp(-330px, -27.5vmin, -110px));
   }
 
