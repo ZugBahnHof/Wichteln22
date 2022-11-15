@@ -1,8 +1,8 @@
 <template>
-  <GiftBox :open="open"/>
-  <input type="checkbox" v-model="open" @click="open = !open">
-<!--  <HelloWorld msg="Welcome to Your Vue.js App"/>-->
   <div class="snowflake-wrapper"><SnowFlakes v-if="!reducedMotion" /></div>
+  <GiftBox :open="open"/>
+  <input type="checkbox" v-model="open">
+<!--  <HelloWorld msg="Welcome to Your Vue.js App"/>-->
 </template>
 
 <script>
@@ -40,5 +40,6 @@ export default {
     top: 0;
     left: 0;
     overflow: clip;
+    pointer-events: none;
   }
 </style>
