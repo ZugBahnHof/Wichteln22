@@ -84,12 +84,15 @@ export default {
     top: 50%;
     transform: scale(20%) rotate(-45deg);
     font-size: clamp(calc(1px / 5 * v-bind(min)), calc(1vmin / 5 * v-bind(vvv)), calc(1px / 5 * v-bind(max)));
-    transition: all ease-in-out 2s;
+    transition: all ease-in-out .5s;
+    transition-delay: 0s;
   }
 
   .box[data-open="true"] #name {
     transform: none;
     left: 50%;
     top: 25%;
+    transition-delay: 1s;
+    transition-duration: 1s;
   }
 </style>
