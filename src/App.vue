@@ -1,25 +1,25 @@
 <template>
   <div class="snowflake-wrapper"><SnowFlakes v-if="!reducedMotion" /></div>
   <GiftBox :open="open"/>
+  <GiftInput/>
   <input type="checkbox" v-model="open">
-<!--  <HelloWorld msg="Welcome to Your Vue.js App"/>-->
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
 import SnowFlakes from "@/components/SnowFlakes";
 import GiftBox from "@/components/GiftBox";
+import GiftInput from "@/components/GiftInput";
 
 export default {
   name: 'App',
   components: {
     GiftBox,
-    // HelloWorld,
+    GiftInput,
     SnowFlakes,
   },
   data: () => {return {
     open: true,
-    reducedMotion: true,
+    reducedMotion: false,
   }}
 }
 </script>
