@@ -1,8 +1,7 @@
 <template>
   <div class="snowflake-wrapper"><SnowFlakes v-if="!reducedMotion" /></div>
-  <GiftBox :open="open" name="Jonerthan"/>
-  <GiftInput/>
-  <input type="checkbox" v-model="open">
+  <GiftBox :open="inputCorrect" name="Jonerthan"/>
+  <GiftInput v-model="input"/>
 </template>
 
 <script>
@@ -18,9 +17,14 @@ export default {
     SnowFlakes,
   },
   data: () => {return {
-    open: false,
     reducedMotion: false,
-  }}
+    input: "",
+  }},
+  computed: {
+    inputCorrect() {
+      return this.input.toLowerCase() === "passwort";
+    }
+  }
 }
 </script>
 
