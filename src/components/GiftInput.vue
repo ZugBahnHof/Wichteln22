@@ -2,7 +2,8 @@
   <div class="wrapper">
     <div class="tag">
       <input type="text" name="name-input" id="name-input" :value="modelValue"
-             @input="$emit('update:modelValue', $event.target.value)" placeholder="Enter your code...">
+             @input="$emit('update:modelValue', $event.target.value)" placeholder="Enter your code..."
+      >
     </div>
   </div>
 </template>
@@ -43,15 +44,19 @@ export default {
 }
 
 input {
-  background: #ad730f;
   border: none;
   padding: 1em;
   border-radius: 12px;
   color: whitesmoke;
   width: 100%;
+  transition: background-position ease 2s;
+  background: #ad730f linear-gradient(75deg, transparent 20%, white 30%, transparent 40%) no-repeat fixed;
+  background-size: 100%;
+  background-position-x: -100vw;
 }
 
 input:focus {
   outline: green 1px solid;
+  background-position-x: 100vw;
 }
 </style>
