@@ -1,6 +1,6 @@
 <template>
   <div class="snowflake-wrapper"><SnowFlakes v-if="!reducedMotion" /></div>
-  <GiftBox :open="open"/>
+  <GiftBox :open="open" name="Jonerthan"/>
   <GiftInput/>
   <input type="checkbox" v-model="open">
 </template>

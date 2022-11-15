@@ -1,5 +1,6 @@
 <template>
   <div class="box" :data-open="open">
+    <span id="name" v-text="name"></span>
     <div class="front"></div>
     <div class="lid"></div>
   </div>
@@ -13,7 +14,12 @@ export default {
       type: Boolean,
       required: false,
       default: false,
-    }
+    },
+    name: {
+      type: String,
+      required: false,
+      default: null,
+    },
   }
 }
 </script>
@@ -61,5 +67,22 @@ export default {
 
   .box[data-open="true"] .lid {
     transform: translate(-60%, calc(-50% + clamp(-330px, -27.5vmin, -110px))) rotate(-30deg);
+  }
+
+  #name {
+    color: white;
+    font-family: Purisa, Comic Sans MS, Roboto, Montserrat, sans-serif;
+    position: absolute;
+    left: 25%;
+    top: 50%;
+    transform: scale(20%) rotate(-45deg);
+    font-size: clamp(40px, 10vmin, 120px);
+    transition: all ease-in-out 2s;
+  }
+
+  .box[data-open="true"] #name {
+    transform: none;
+    left: 50%;
+    top: 25%;
   }
 </style>
