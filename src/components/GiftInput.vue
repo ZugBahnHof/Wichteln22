@@ -23,6 +23,7 @@ export default {
   background: #e09514;
   padding: .5em;
   border-radius: 2px;
+  z-index: 2;
 }
 .tag {
   height: 100px;
