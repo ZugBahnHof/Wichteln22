@@ -1,5 +1,6 @@
 <template>
   <div class="snowflake-wrapper"><SnowFlakes v-if="!reducedMotion" /></div>
+  <DottingTitle/>
   <GiftBox :open="inputCorrect" name="Jonerthan"/>
   <GiftInput v-model="input"/>
 </template>
@@ -8,10 +9,12 @@
 import SnowFlakes from "@/components/SnowFlakes";
 import GiftBox from "@/components/GiftBox";
 import GiftInput from "@/components/GiftInput";
+import DottingTitle from "@/components/DottingTitle";
 
 export default {
   name: 'App',
   components: {
+    DottingTitle,
     GiftBox,
     GiftInput,
     SnowFlakes,
@@ -45,5 +48,9 @@ export default {
     left: 0;
     overflow: clip;
     pointer-events: none;
+  }
+
+  * {
+    font-family: "Dancing Script", "Caveat", "Indie Flower", "Permanent Marker", "XKCHAND", "Gloria Hallelujah", "Purisa", "Century Schoolbook L", "Comic Sans MS", sans-serif;
   }
 </style>
