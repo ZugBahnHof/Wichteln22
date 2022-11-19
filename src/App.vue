@@ -1,5 +1,6 @@
 <template>
   <div class="snowflake-wrapper"><SnowFlakes v-if="!reducedMotion" /></div>
+  <SnowBorder/>
   <DottingTitle/>
   <GiftBox :open="inputCorrect" name="Jonerthan"/>
   <GiftInput v-model="input"/>
@@ -10,6 +11,7 @@ import SnowFlakes from "@/components/SnowFlakes";
 import GiftBox from "@/components/GiftBox";
 import GiftInput from "@/components/GiftInput";
 import DottingTitle from "@/components/DottingTitle";
+import SnowBorder from "@/components/SnowBorder";
 
 export default {
   name: 'App',
@@ -18,6 +20,7 @@ export default {
     GiftBox,
     GiftInput,
     SnowFlakes,
+    SnowBorder,
   },
   data: () => {return {
     reducedMotion: false,
