@@ -86,6 +86,17 @@ export default {
     font-size: clamp(calc(1px / 5 * v-bind(min)), calc(1vmin / 5 * v-bind(vvv)), calc(1px / 5 * v-bind(max)));
     transition: all ease-in-out .5s;
     transition-delay: 0s;
+    animation: none;
+  }
+
+  @keyframes squiggle {
+    25% {
+      rotate: -2deg;
+    }
+
+    75% {
+      rotate: 2deg;
+    }
   }
 
   .box[data-open="true"] #name {
@@ -94,5 +105,6 @@ export default {
     top: 25%;
     transition-delay: 1s;
     transition-duration: 1s;
+    animation: squiggle infinite ease-in-out 2s;
   }
 </style>
