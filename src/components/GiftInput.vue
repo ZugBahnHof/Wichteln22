@@ -60,4 +60,8 @@ input:focus {
   outline: green 1px solid;
   background-position-x: 100vw;
 }
+
+input::selection {
+  background: green;
+}
 </style>
