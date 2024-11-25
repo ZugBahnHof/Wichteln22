@@ -2,7 +2,7 @@
   <div class="snowflake-wrapper"><SnowFlakes v-if="!reducedMotion" /></div>
   <SnowBorder/>
   <DottingTitle/>
-  <GiftBox :open="inputCorrect" name="Jonerthan"/>
+  <GiftBox :open="open" :name="name"/>
   <GiftInput v-model="input"/>
 </template>
 
@@ -12,6 +12,7 @@ import GiftBox from "@/components/GiftBox";
 import GiftInput from "@/components/GiftInput";
 import DottingTitle from "@/components/DottingTitle";
 import SnowBorder from "@/components/SnowBorder";
+import { ಠ_ಠ, ǃ } from "@/data/crypto.obfuscated"
 
 export default {
   name: 'App',
@@ -27,9 +28,13 @@ export default {
     input: "",
   }},
   computed: {
-    inputCorrect() {
-      return this.input.toLowerCase() === "passwort";
-    }
+    open() {
+      return !!ǃ(this.input);
+    },
+    name() {
+      if (!this.open) return "???";
+      return ಠ_ಠ(this.input);
+    },
   }
 }
 </script>
